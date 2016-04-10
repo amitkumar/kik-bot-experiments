@@ -6,8 +6,8 @@ var options = {
     uri : 'https://api.kik.com/v1/config',
     method : 'POST',
     auth: {
-        'user': '<username>',
-        'pass': '<api_key>',
+        'user': 'hello.bot',
+        'pass': '1300e324-fc0f-433d-9767-15ff59a801d5',
         'sendImmediately': false
     },
     json: {

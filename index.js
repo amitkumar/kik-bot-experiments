@@ -9,8 +9,8 @@ var app = express();
 
 // Configure the bot API endpoint, details for your bot
 let bot = new Bot({
-    username: 'echo.bot',
-    apiKey: '7b939d69-e840-4d22-aab8-4188c2198f8a',
+    username: 'hello.bot',
+    apiKey: '1300e324-fc0f-433d-9767-15ff59a801d5',
     baseUrl: 'kik-echobot.ngrok.io'
 });
 
