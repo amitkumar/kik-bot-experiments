@@ -1,9 +1,13 @@
 # kik-bot-experiments
-Experimenting with what's possible with Kik bots. Running a simple express.js server and a bot that echos user messages.
+Experimenting with what's possible with Kik bots. 
+
+Running a simple express.js server and a bot that echos user messages.
+
+Visit this bot on Kik: @hello.bot
 
 
 # Set up
-- Add a `config.json` with the following content:
+- Add a `config.json` file at the project root with the following content:
 	
 	```javascript
 	{
@@ -16,7 +20,7 @@ Experimenting with what's possible with Kik bots. Running a simple express.js se
 	Replace `username` and `apiKey` with your bot's settings from https://dev.kik.com/#/engine/. 
 
 	Replace `webhook` with the URL of your server.
-	
+
 - To configure your bot with Kik, you have to submit a POST to their server with your bot's config settings. 
 	This project contains a node.js versions of the Python scripts at https://dev.kik.com/#/docs/messaging#configuration. 
 
