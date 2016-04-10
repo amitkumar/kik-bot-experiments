@@ -1,0 +1,23 @@
+{
+  "name": "kik-bot-experiments",
+  "version": "1.0.0",
+  "description": "Experimenting with what's possible with Kik bots",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amitkumar/kik-bot-experiments.git"
+  },
+  "author": "Amit Kumar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/amitkumar/kik-bot-experiments/issues"
+  },
+  "homepage": "https://github.com/amitkumar/kik-bot-experiments#readme",
+  "dependencies": {
+    "@kikinteractive/kik": "^2.0.0",
+    "request": "^2.70.0"
+  }
+}
