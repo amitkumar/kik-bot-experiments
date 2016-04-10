@@ -1,13 +1,14 @@
 'use strict';
 
 let request = require('request');
+let config = require('../config');
 
 var options = {
     uri : 'https://api.kik.com/v1/config',
     method : 'GET',
     auth: {
-        'user': '<username>',
-        'pass': '<api_key>',
+        'user': config.username,
+        'pass': config.apiKey,
         'sendImmediately': false
     }
 }

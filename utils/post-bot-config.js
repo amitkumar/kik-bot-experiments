@@ -1,17 +1,18 @@
 'use strict';
 
 let request = require('request');
+let config = require('../config');
 
 var options = {
     uri : 'https://api.kik.com/v1/config',
     method : 'POST',
     auth: {
-        'user': 'hello.bot',
-        'pass': '1300e324-fc0f-433d-9767-15ff59a801d5',
+        'user': config.username,
+        'pass': config.apiKey,
         'sendImmediately': false
     },
     json: {
-        'webhook': 'https://example.com/incoming',
+        'webhook': config.webhook,
         'features': {
             'manuallySendReadReceipts': false,
             'receiveReadReceipts': false,
