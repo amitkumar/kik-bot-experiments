@@ -1,8 +1,11 @@
 'use strict';
 
+let express = require('express');
 let util = require('util');
 let http = require('http');
 let Bot  = require('@kikinteractive/kik');
+
+var app = express();
 
 // Configure the bot API endpoint, details for your bot
 let bot = new Bot({
@@ -16,8 +19,12 @@ bot.onTextMessage((message) => {
     message.reply('hello! You sent me the message: "' + message.body + '"');
 });
 
-// Set up your server and start listening
-let server = http
-    .createServer(bot.incoming())
-    .listen(process.env.PORT || 8080);
-console.log('server started');
+app.get('/', function(req, res){
+	res.send('Hello');
+});
+
+app.use(bot.incoming());
+
+app.listen(process.env.PORT || 8080, function(){
+	console.log('Server started on port ' + (process.env.PORT || 8080));
+});
