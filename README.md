@@ -4,6 +4,7 @@ Experimenting with what's possible with Kik bots. Running a simple express.js se
 
 # Set up
 - Add a `config.json` with the following content:
+	
 	```javascript
 	{
 		"username": "echo.bot",
@@ -11,7 +12,11 @@ Experimenting with what's possible with Kik bots. Running a simple express.js se
 		"webhook" : "http://example.com/incoming"
 	}
 	```
-	Replace `username` and `apiKey` with your bot's settings from https://dev.kik.com/#/engine/. Replace `webhook` with the URL of your server.
+	
+	Replace `username` and `apiKey` with your bot's settings from https://dev.kik.com/#/engine/. 
+
+	Replace `webhook` with the URL of your server.
+	
 - To configure your bot with Kik, you have to submit a POST to their server with your bot's config settings. 
 	This project contains a node.js versions of the Python scripts at https://dev.kik.com/#/docs/messaging#configuration. 
 
