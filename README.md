@@ -45,6 +45,7 @@ Visit this bot on Kik: @hello.bot
 	```
 
 # Misc Notes & Resources
+- https://dev.kik.com/#/docs/getting-started
 - https://github.com/kikinteractive/kik-node#your-first-echo-bot
 - https://dev.kik.com/#/docs/messaging#configuration
 - By default, the bot.incoming() middleware will intercept traffic to '/incoming'. Set a custom path with the `incomingPath` setting when creating `new Bot({})`
