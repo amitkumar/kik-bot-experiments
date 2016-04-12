@@ -41,7 +41,7 @@ function processTextMessage(message, callback){
 
 bot.onTextMessage((message) => {
 	console.log('Hello got a message', message);
-	processTextMessage(message, function(err, response){
+	processTextMessage(message.body, function(err, response){
 		message.reply(response);
 	});
 });
