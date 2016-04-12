@@ -4,15 +4,15 @@ let express = require('express');
 let util = require('util');
 let http = require('http');
 let Bot  = require('@kikinteractive/kik');
-let config = require('./config');
 let request = require('request');
+let getenv = require('getenv');
 
 var app = express();
 
 // Configure the bot API endpoint, details for your bot
 let bot = new Bot({
-	username: config.username,
-	apiKey: config.apiKey,
+	username: getenv('KIK_USERNAME'),
+	apiKey: getenv('KIK_APIKEY'),
 	baseUrl: 'kik-echobot.ngrok.io'
 });
 

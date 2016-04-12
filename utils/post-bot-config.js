@@ -1,18 +1,18 @@
 'use strict';
 
 let request = require('request');
-let config = require('../config');
+let getenv = require('getenv');
 
 var options = {
     uri : 'https://api.kik.com/v1/config',
     method : 'POST',
     auth: {
-        'user': config.username,
-        'pass': config.apiKey,
+        'user': getenv('KIK_USERNAME'),
+        'pass': getenv('KIK_APIKEY'),
         'sendImmediately': false
     },
     json: {
-        'webhook': config.webhook,
+        'webhook': getenv('KIK_WEBHOOK'),
         'features': {
             'manuallySendReadReceipts': false,
             'receiveReadReceipts': false,

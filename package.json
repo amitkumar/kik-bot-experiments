@@ -19,6 +19,7 @@
   "dependencies": {
     "@kikinteractive/kik": "^2.0.0",
     "express": "^4.13.4",
+    "getenv": "^0.6.0",
     "request": "^2.70.0"
   }
 }

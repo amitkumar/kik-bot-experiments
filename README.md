@@ -7,19 +7,18 @@ Visit this bot on Kik: @hello.bot
 
 
 # Set up
-- Add a `config.json` file at the project root with the following content:
-	
-	```javascript
-	{
-		"username": "echo.bot",
-		"apiKey" : "",
-		"webhook" : "http://example.com/incoming"
-	}
-	```
-	
-	Replace `username` and `apiKey` with your bot's settings from https://dev.kik.com/#/engine/. 
+- Create environment variables for your Kik bot settings:
+	```shell
+	$ export KIK_USERNAME=echo.bot
+	$ export KIK_APIKEY=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+	$ export KIK_WEBHOOK=https://example.com/incoming
+	````
 
-	Replace `webhook` with the URL of your server.
+	Set `KIK_USERNAME` and `KIK_APIKEY` with your bot's settings from https://dev.kik.com/#/engine/. 
+
+	Set `KIK_WEBHOOK` with the URL of your server.
+
+	To make sure these environment variables are set for every shell session, add those lines to your ~/.bash_profile file.
 
 - To configure your bot with Kik, you have to submit a POST to their server with your bot's config settings. 
 	This project contains a node.js versions of the Python scripts at https://dev.kik.com/#/docs/messaging#configuration. 
