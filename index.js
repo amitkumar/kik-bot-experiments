@@ -18,7 +18,8 @@ let bot = new Bot({
 
 
 function processTextMessage(message, callback){
-	if (message.indexOf('weather') === 0){
+	// If the message starts with "weather "
+	if (message.toLowerCase().indexOf('weather') === 0){
 		var location = message.slice('weather '.length);
 		var options = {
 			uri : 'https://query.yahooapis.com/v1/public/yql?q=select%20item.condition.text%20from%20weather.forecast%20where%20woeid%20in%20(select%20woeid%20from%20geo.places(1)%20where%20text%3D' + encodeURIComponent('"' + location + '"') + ')&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys',
@@ -34,7 +35,7 @@ function processTextMessage(message, callback){
 			}
 		});
 	} else {
-		callback(null, 'Hello! You sent me the message: "' + message + '". I don\'t know how to respond to that. You can try asking me for the weather: "weather brooklyn", and maybe some more things in the future.');
+		callback(null, 'Hello! You sent me the message: "' + message + '". I don\'t quite know how to respond to that. You can try asking me for the weather: "weather brooklyn", and maybe some more things in the future.');
 	}
 }
 
