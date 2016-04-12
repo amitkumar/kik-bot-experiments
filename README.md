@@ -1,7 +1,11 @@
 # kik-bot-experiments
 Experimenting with what's possible with Kik bots. 
 
-Running a simple express.js server and a bot that echos user messages.
+Running a simple express.js server and a bot that, so far, does the following:
+
+- Tell you the weather: "weather brooklyn"
+	> "Breezy"
+- Echo back your message if it doesn't start with "weather "
 
 Visit this bot on Kik: @hello.bot
 
